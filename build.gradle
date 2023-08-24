@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+ext {
+    compileSdkVersion = 33
+    buildToolsVersion = '33.0.2'
+    androidXLibraryVersion = '1.0.0'
+
+    PUBLISH_GROUP_ID = 'com.theartofdev.edmodo'
+    PUBLISH_ARTIFACT_ID = 'android-image'
+    PUBLISH_VERSION = '2.9.0'
+    // gradlew clean build generateRelease
+}
